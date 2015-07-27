@@ -1,0 +1,127 @@
+.logo {
+	.make-md-column(4);
+	position: relative;
+	font-family: @font-family-secondary;
+	padding: .15em 0 0 1.1em;
+
+	&:before {
+		content: url(../images/icons/logo.png);
+		position: absolute;
+		top: .3em;
+		left: 0;
+	}
+
+	a {
+		color: #fff;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	small {
+		font-size: @font-size-base-lg;
+		color: #fff; 
+		padding-left: .25em;
+	}
+}
+
+.navbar {
+	.make-md-column(8);
+	.clearfix();
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 3.3em 0 0 2.6em;
+		overflow: hidden;
+
+		li {
+			float: left;
+			margin-right: .7em;
+
+			&.active > a {
+				background-color: @navbar-link-active-bg;
+				color: @navbar-link-active-color;
+				border-radius: @border-radius-base;
+				box-shadow: 1px -1px 0 #656572, 1px 0 0 #656572;
+
+				&:hover,
+				&:focus,
+				&:active {
+					text-decoration: none;
+					cursor: default;
+				}
+			}
+
+			a {
+				display: block;
+				color: @navbar-link-color;
+				font: 17px @font-family-base;
+				padding: @padding-small-vertical @padding-small-horizontal;
+			}
+
+			@media(max-width: @screen-xs-min) {
+				float: none;
+				margin: 0;
+			}
+		}
+
+		@media(max-width: @screen-xs-min) {
+			display: none;
+			background: rgba(0,0,0,.3);
+			padding: 10px;
+			border-radius: @border-radius-base;
+		}
+
+		@media(min-width: @screen-xs-min) {
+			display: block !important; // if toggle method set attr style to display none when screen was small, this rule makes menu visible again after screen was larged 
+		}
+	}
+
+	@media(max-width: @screen-md-min) {
+		margin-left: -3.5em;
+	}
+}
+
+.navbar-toggle {
+	display: none;
+  position: relative;
+  float: right;
+  margin-left: 10px;
+  padding: 9px 10px;
+  background-color: transparent;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid @navbar-link-active-bg;
+  border-radius: @border-radius-base;
+  cursor: pointer;
+
+  
+  &:hover {
+    background: rgba(255,255,255,.3);;
+  }
+
+  &:active,
+  &:focus {
+  	background: rgba(255,255,255,.6);
+  }
+
+  // Bars
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background: @navbar-link-active-bg;
+  }
+  .icon-bar + .icon-bar {
+    margin-top: 4px;
+  }
+
+  @media(max-width: @screen-xs-min) {
+  	display: block;
+  }
+}
+
+
+

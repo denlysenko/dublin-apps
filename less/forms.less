@@ -1,0 +1,12 @@
+.form-control {
+	border-radius: @border-radius-base;
+	transition: box-shadow .6s;
+	
+	&:focus {
+		box-shadow: 0 0 3px 1px @brand-primary;
+	}
+}
+
+.has-error {
+	box-shadow: 0 0 3px 1px rgba(255,0,0,.5) !important;
+}

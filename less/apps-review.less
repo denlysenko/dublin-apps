@@ -1,0 +1,56 @@
+.apps-review {
+	.make-row();
+
+	h3 {
+		display: inline-block;
+		margin: .3em 0 0 10.2em;
+
+		small {
+			font-size: @font-size-md;
+			margin-left: .3em;
+		}
+
+		@media(max-width: @screen-md-min) {
+			margin: 0 0 2em 13px;
+		}
+	}
+
+	.list {
+		.make-md-column(6);
+
+		ul {
+			margin-bottom: 1.8em;
+			margin-top: 2.8em;
+		}
+	}
+
+	.btn-primary {
+		margin: 0 0 .3em 1.3em;
+	}
+
+	@media(max-width: @screen-md-min) {
+		margin-top: 2em;
+	}
+}
+
+.preview {
+	.make-md-column(5);
+	position: relative;
+	margin: -.3em 0 0 1em;
+
+	img {
+		@media(max-width: @screen-xs-min) {
+			width: 100%;
+		}
+	}
+
+	a {
+		position: absolute;
+		top: 4.2em;
+		left: 5.8em;
+		display: block;
+		width: 32px;
+		height: 32px;
+		background: url(../images/icons/play_icon.png) no-repeat;
+	}
+}

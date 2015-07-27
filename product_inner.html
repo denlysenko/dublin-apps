@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dublin Apps Product Details</title>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	  <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="css/dublin.min.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1 class="logo"><a href="index.html">Dublin Apps</a>
+				<small>iPad applications</small>
+			</h1>
+			<nav class="navbar" data-collapse="collapse">
+				<a href="#main-nav" class="navbar-toggle" data-toggle="collapse" role="button">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<ul class="panel-collapse" id="main-nav">
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="products.html">iPad apps</a></li>
+					<li><a href="demo.html">Demonstrations</a></li>
+					<li><a href="blogs.html">Blogs</a></li>
+					<li><a href="contact.html">Connect us</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="content">
+			<div class="header">
+				<h3>Dublin's iPad application Details<small>Lorem Ipsum is simply dummy</small></h3>
+        <form action="handler.php" name="search" method="POST">
+          <input type="search" placeholder="Search" class="form-control">
+          <button type="submit"></button>
+        </form>
+      </div>
+      <div class="product-inner">
+        <h2 class="title">Dublin's iPad applications <small>Lorem Ipsum is simply dummy</small>
+        </h2>
+        <div class="item-photo">
+          <img src="images/products/banner.png" alt="product">
+          <a href="#" class="btn-primary" data-toggle="modal" data-target="#login" role="button">buy now</a>
+          <span class="special-price">250$ <span>Special Season Offer</span></span>
+        </div>
+        <section class="product-description">
+          <h2>Dublin's iPad applications</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </section>
+        <section class="related-products">
+          <h2>Dublin's iPad applications</h2>
+          <div class="list">
+            <ul>
+              <li><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting </a></li>
+              <li><a href="#">Industry. Lorem Ipsum has been the industry's standard</a></li>
+              <li><a href="#">Dummy text ever since the 1500s, when an unknown printer </a></li>
+              <li><a href="#">Took a galley of type and scrambled it to make a type specimen book. </a></li>
+              <li><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting </a></li>
+              <li><a href="#">Took a galley of type and scrambled it to make a type specimen book. </a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+	</div>	
+	<footer>
+    <div class="container">
+    	<blockquote class="twitter-update"><i></i><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text  of the printing and typesetting industry.</p>
+    	  <span> - versions of Lorem Ipsum.</span>
+    	</blockquote>
+    	<div class="footer-forms">
+        <div class="subscribe">
+          <h3>Newsletter</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+          <form action="handler.php" method="post">
+             <input type="email" placeholder="enter your email address" name="email" class="form-control" data-validate="required">
+            <button type="submit" class="btn-default">Subsribe</button>
+          </form>
+        </div>
+        <div class="feedback">
+          <h3>Contact form</h3>
+          <form action="handler.php" method="post">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your name" class="form-control" data-validate="required">
+              <input type="text" name="subject" placeholder="Subject" class="form-control" data-validate="required">
+              <input type="email" name="email" placeholder="Your Email" class="form-control" data-validate="required">
+            </div>
+            <div class="form-group">
+              <textarea name="request" rows="8" class="form-control" data-validate="required" placeholder="Enter Your question"></textarea>
+            </div>
+            <button type="submit" class="btn-default">Submit</button>
+          </form>
+        </div>
+      </div>
+    	<div class="social-links">
+    	  <a href="twitter"></a>
+    	  <a href="facebook"></a>
+    	  <a href="linkedin"></a>
+    	  <span>Designed by CSSAuthor&copy;2012-2013</span>
+    	</div>
+    </div>
+  </footer>
+  <!-- Modals -->
+  <div id="login" class="modal">
+    <h3>Member Login<small>Lorem Ipsum is simply dummy</small></h3>
+    <form action="handler.php" method="post">
+      <input type="text" placeholder="Username" name="username" class="form-control" data-validate="required">
+      <input type="password" placeholder="Password" name="password" class="form-control" data-validate="required">
+      <a href="#">Lost password?</a>
+      <button type="submit" class="btn-secondary" data-toggle="modal" data-target="#payment">Login</button>
+    </form>
+  </div>
+  <div id="payment" class="modal">
+    <form action="handler.php" method="post">
+      <h3>Dublin's iPad application<small>Lorem Ipsum is simply dummy</small></h3>
+      <div class="quantity">
+        <div class="custom-number">
+          <input type="text" name="quantity" value="01" class="form-control" data-validate="required">
+          <a href="#" class="number-control down" role="button"></a>
+          <a href="#" class="number-control up" role="button"></a>
+        </div>
+        <span class="item-name">iPad application</span>
+      </div>
+      <div class="amount">
+        Total: <span>155 $</span>
+      </div>
+      <div class="credit-card">
+        <input type="text" placeholder="Credit card number" name="card" class="form-control" data-validate="required number">
+        <button type="submit" class="btn-secondary" data-toggle="modal" data-target="#end">Pay now</button>
+      </div>
+      <div class="warning-info">
+        printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text
+      </div>
+    </form>
+    <div class="paypal">
+      <h3><a href="#">Paypal<small>Lorem Ipsum</small></a></h3>
+    </div>
+  </div>
+  <div id="end" class="modal">
+    <h4>Do You want to continue operation?<small>Lorem Ipsum is simply dummy</small></h4>
+    <form action="handler.php" method="post">
+      <button type="submit" class="btn-secondary">Yes</button>
+      <button type="button" class="btn-secondary" data-dismiss="modal">No</button></form>
+  </div>
+  <div id="overlay"></div>
+	<script src="js/jquery.min.js"></script>
+  <script src="js/dublin.min.js"></script>
+</body>
+</html>

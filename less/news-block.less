@@ -1,0 +1,75 @@
+.news-block {
+	position: relative;
+	width: 60%;
+	margin: 2em auto;
+
+	&:before,
+	&:after {
+		content: '';
+		position: relative;
+		left: -25%;
+		display: block;
+		width: 150%;
+		height: 1px;
+		border-top: 1px solid #dcddde;
+	}
+
+	.carousel {
+		overflow: hidden;
+	}
+
+	.carousel-inner {
+		&:extend(.slider .carousel-inner);
+		margin: 0;
+	}
+
+	.carousel-item {
+		.make-row();
+		float: left;
+		width: 582px;
+		margin: 0;
+
+		p {
+			.make-sm-column(8);
+			.make-md-column(12);
+			text-align: center;
+			padding: 20px 0;
+			font: 16px @font-family-third;
+			background: -moz-linear-gradient(left, #e4e5e7 10%, #ecedee 30%, #ecedee 70%,#e4e5e7 90%);
+			background: -webkit-linear-gradient(left, #e4e5e7 10%, #ecedee 30%, #ecedee 70%, #e4e5e7 90%);
+			background: -o-linear-gradient(left, #e4e5e7 10%, #ecedee 30%, #ecedee 70%, #e4e5e7 90%);
+			background: linear-gradient(to right, #e4e5e7 10%, #ecedee 30%, #ecedee 70%, #e4e5e7 90%);
+		}
+
+		a {
+			color: @brand-primary;
+		}
+	}
+
+	.carousel-control {
+		&:extend(.slider .carousel-control);
+		top: 33%;
+		background: url(../images/icons/arrows.png);
+		width: 23px;
+		height: 27px;
+
+		&.left {
+			left: -3em;
+		}
+
+		&.right {
+			right: -1.5em;
+			background-position: -23px 0;
+		}
+
+		&:active,
+		&:hover,
+		&:focus {
+			opacity: .7;
+		}
+	}	
+
+	@media(max-width: @screen-sm-min) {
+		display: none;
+	}
+}

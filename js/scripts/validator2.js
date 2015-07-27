@@ -1,0 +1,151 @@
+
+;(function($){
+
+	'use strict';
+
+	var Tooltip = function(element, options) {
+		this.$element = $(element);
+		this.options = $.extend({}, Tooltip.DEFAULTS, options);
+	};
+
+	Tooltip.DEFAULTS = {
+		offsetFromElem: 10
+	};
+
+	Tooltip.prototype.makeTooltipElem = function() {
+		this.tooltipElem = $('<span>').addClass('tooltip')
+                             .html(this.options.html)
+                             .appendTo('body');
+	};
+
+	Tooltip.prototype.show = function() {
+		this.makeTooltipElem();
+		var $elem = this.$element,
+				self = this;
+		
+    this.positionTooltip($elem);
+
+    $(window).on('scroll.tooltip', function(){
+    	self.positionTooltip($elem);
+    });
+	};
+
+	Tooltip.prototype.destroy = function() {
+		this.tooltipElem.remove();
+		$(window).off('scroll.tooltip');
+	};
+
+	Tooltip.prototype.positionTooltip = function(elem) {
+		var coords = elem.offset(),
+		offsetFromElem = this.options.offsetFromElem,
+		$tooltipElem = this.tooltipElem, 
+    left = coords.left + elem.outerWidth() + offsetFromElem,
+    top = coords.top;
+
+    $tooltipElem.css({
+      top: top,
+      left: left
+    })   
+	};
+
+	var validator = {
+
+		data: {},
+
+		types: {},
+		
+		onKeyDown: function() {
+			var $this = $(this),
+					tooltip = $this.data('tooltip'),
+					$button = $this.closest('form').find('[type="submit"]');
+			if(tooltip) {
+				tooltip.destroy();
+				$(this).removeData('tooltip').removeClass('has-error');
+				$button.removeAttr('disabled').removeClass('disabled');
+			}
+		},
+		
+		validate: function(form) {
+			var $form = $(form),
+					inputs = $('input, textarea', $form),
+					value,
+					self = this,
+					valid = true,
+					$button = $('[type="submit"]', $form);
+					
+			inputs.each(function() {
+				var $this = $(this),
+						name = $this.attr('name'), 
+						validation = $this.attr('data-validate'),
+						checker,
+						result,
+						value = $this.val(),
+						type,
+						tooltip = $this.data('tooltip');
+
+				if(!validation) return;		
+				type = (validation.indexOf(' ') !== -1) ? validation.split(' ') : validation;
+				
+				if($.isArray(type)) {
+					var types = type, len = types.length, i;
+
+					for(i = 0; i < len; i++) {
+						type = 'is' + types[i];
+						checker = self.types[type];
+						if(!checker) return;
+						result = checker.validate(value);
+						if(!result) {
+							if(!tooltip) {
+								tooltip = new Tooltip($this, {html: checker.instructions + name});
+								tooltip.show();
+								$this.addClass('has-error').data('tooltip', tooltip);
+								$button.attr('disabled', 'disabled').addClass('disabled');
+								valid = false;
+								break;
+							}
+							
+						}
+					}
+				} else {
+					type = 'is' + type;
+					checker = self.types[type];
+					if(!checker) return;
+					result = checker.validate(value);
+					if(!result) {
+						if(!tooltip) {
+							tooltip = new Tooltip($this, {html: checker.instructions + name});
+							tooltip.show();
+							$this.addClass('has-error').data('tooltip', tooltip);
+						}
+						$button.attr('disabled', 'disabled').addClass('disabled');
+						valid = false;
+					}
+				}
+			});		
+			return valid;
+		}
+	};
+
+	validator.types.isrequired = {
+		validate: function(value) {
+			return value !== '';
+		},
+		instructions: 'Enter '
+	};
+
+	validator.types.isnumber = {
+		validate: function(value) {
+			return !isNaN(value);
+		},
+		instructions: 'Enter number for '
+	};
+
+	$(function() {
+		$('form').each(function() {
+			$(this).on('submit', function() {
+				if(!validator.validate(this)) return false;
+			}).on('keydown', 'input, textarea', validator.onKeyDown);
+		});
+	});
+
+}(jQuery));

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dublin Apps Contacts</title>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	  <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="css/dublin.min.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1 class="logo"><a href="index.html">Dublin Apps</a>
+				<small>iPad applications</small>
+			</h1>
+			<nav class="navbar" data-collapse="collapse">
+				<a href="#main-nav" class="navbar-toggle" data-toggle="collapse" role="button">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<ul class="panel-collapse" id="main-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">iPad apps</a></li>
+					<li><a href="demo.html">Demonstrations</a></li>
+					<li><a href="blogs.html">Blogs</a></li>
+					<li class="active"><a href="contact.html">Connect us</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="content">
+			<div class="header">
+				<h3>Keep in touch with us <small>Lorem Ipsum is simply dummy</small></h3>
+        <form action="handler.php" name="search" method="POST">
+          <input type="search" placeholder="Search" class="form-control">
+          <button type="submit"></button>
+        </form>
+      </div>
+      <div class="contact">
+        <section class="contact-form">
+          <form action="handler.php" method="post">
+            <div class="form-group">
+              <input type="text" placeholder="Your name" class="form-control" name="name" data-validate="required">
+              <input type="email" name="email" placeholder="Email address" class="form-control" data-validate="required">
+              <input type="text" name="phone" placeholder="Phone" class="form-control" data-validate="required number">
+              <textarea name="message"  rows="10" class="form-control" data-validate="required" placeholder="Your message"></textarea>
+            </div>
+            <button class="btn-primary" type="submit">Submit</button>
+          </form>
+        </section>
+        <section class="map">
+          <div class="address">
+            <h4>Dublin iPad Applications</h4>
+            <address> Lorem Ipsum simply, <br>dummytext
+             <br>printing <br>
+             email: mail@yourdomainname.com <br>
+             info@yourdomainname.com <br>
+            Phone: +99 54412477, +99 984561142 <br>
+                     </address>
+          </div>
+          <img src="images/icons/map.png" alt="map">
+        </section>
+      </div>
+    </div>
+	</div>	
+	<footer>
+    <div class="container">
+    	<blockquote class="twitter-update"><i></i><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text  of the printing and typesetting industry.</p>
+    	  <span> - versions of Lorem Ipsum.</span>
+    	</blockquote>
+    	<div class="footer-forms">
+        <div class="subscribe">
+          <h3>Newsletter</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+          <form action="handler.php" method="post">
+            <input type="email" placeholder="enter your email address" name="email" class="form-control" data-validate="required">
+            <button type="submit" class="btn-default">Subsribe</button>
+          </form>
+        </div>
+        <div class="feedback">
+          <h3>Contact form</h3>
+          <form action="handler.php" method="post">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your name" class="form-control" data-validate="required">
+              <input type="text" name="subject" placeholder="Subject" class="form-control" data-validate="required">
+              <input type="email" name="email" placeholder="Your Email" class="form-control" data-validate="required">
+            </div>
+            <div class="form-group">
+              <textarea name="request" rows="8" class="form-control" data-validate="required" placeholder="Enter Your question"></textarea>
+            </div>
+            <button type="submit" class="btn-default">Submit</button>
+          </form>
+        </div>
+      </div>
+    	<div class="social-links">
+    	  <a href="twitter"></a>
+    	  <a href="facebook"></a>
+    	  <a href="linkedin"></a>
+    	  <span>Designed by CSSAuthor&copy;2012-2013</span>
+    	</div>
+    </div>
+  </footer>
+	<script src="js/jquery.min.js"></script>
+  <script src="js/dublin.min.js"></script>
+</body>
+</html>

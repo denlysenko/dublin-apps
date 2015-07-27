@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'colaboratelightregular';
+    src: url('../fonts/colablig-webfont.eot');
+    src: url('../fonts/colablig-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/colablig-webfont.woff2') format('woff2'),
+         url('../fonts/colablig-webfont.woff') format('woff'),
+         url('../fonts/colablig-webfont.ttf') format('truetype'),
+         url('../fonts/colablig-webfont.svg#colaboratelightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'flare_light_gothiclight';
+    src: url('../fonts/flare_gothic_light-webfont.eot');
+    src: url('../fonts/flare_gothic_light-webfont.eot?#iefix') format('../embedded-opentype'),
+         url('../fonts/flare_gothic_light-webfont.woff2') format('woff2'),
+         url('../fonts/flare_gothic_light-webfont.woff') format('woff'),
+         url('../fonts/flare_gothic_light-webfont.ttf') format('truetype'),
+         url('../fonts/flare_gothic_light-webfont.svg#flare_light_gothiclight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'alexandriaflfregular';
+    src: url('../fonts/alexandriaflf-webfont.eot');
+    src: url('../fonts/alexandriaflf-webfont.eot?#iefix') 
+    format('../fonts/embedded-opentype'),
+         url('../fonts/alexandriaflf-webfont.woff2') format('woff2'),
+         url('../fonts/alexandriaflf-webfont.woff') format('woff'),
+         url('../fonts/alexandriaflf-webfont.ttf') format('truetype'),
+         url('../fonts/alexandriaflf-webfont.svg#alexandriaflfregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'alexandriaflfbold';
+    src: url('..fonts/alexandriaflf-bold-webfont.eot');
+    src: url('..fonts/alexandriaflf-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('..fonts/alexandriaflf-bold-webfont.woff2') format('woff2'),
+         url('..fonts/alexandriaflf-bold-webfont.woff') format('woff'),
+         url('..fonts/alexandriaflf-bold-webfont.ttf') format('truetype'),
+         url('..fonts/alexandriaflf-bold-webfont.svg#alexandriaflfbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'chunkfiveroman';
+    src: url('../fonts/chunkfive-webfont.eot');
+    src: url('../fonts/chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chunkfive-webfont.woff2') format('woff2'),
+         url('../fonts/chunkfive-webfont.woff') format('woff'),
+         url('../fonts/chunkfive-webfont.ttf') format('truetype'),
+         url('../fonts/chunkfive-webfont.svg#chunkfiveroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'contraregular';
+    src: url('../fonts/contra__-webfont.eot');
+    src: url('../fonts/contra__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/contra__-webfont.woff2') format('woff2'),
+         url('../fonts/contra__-webfont.woff') format('woff'),
+         url('../fonts/contra__-webfont.ttf') format('truetype'),
+         url('../fonts/contra__-webfont.svg#contraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

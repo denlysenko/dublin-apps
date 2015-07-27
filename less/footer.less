@@ -1,0 +1,199 @@
+footer {
+	margin: 2em 0 0;
+	padding-top: 1px;
+	background: @footer-bg;
+	#gradient > .directional(@start-color: rgba(137, 137, 167, 0.1); @end-color: rgba(128, 128, 128, 0.02); @deg: 284deg);
+	color: #b5b5bc;
+
+	h3 {
+		color: #fff;
+		font-size: @font-size-xl;
+		margin: .6em 0 .3em;
+	}
+
+	blockquote {
+		position: relative;
+		font-family: @font-family-third;
+		font-size: @font-size-md;
+		border-left: none;
+		padding: 0 5.2em .25em 1.2em;
+		margin: 0;
+		overflow: hidden;
+
+		p {
+			margin-top: 1.2em;
+			line-height: 1.7;
+		}
+
+		i {
+			float: left;
+			width: 64px;
+			height: 64px;
+			margin-right: 2.7em;
+			margin-top: 1em;
+			background: url(../images/icons/twit_icon.png);
+		}
+
+		span {
+			float: right;
+			font-style: italic;
+			font-weight: bold;
+		}
+
+		&:before { //border at the top
+			content:"";
+			display: block;
+			width: 80%;
+			height:1px;
+			border-top:1px solid #8c8c96;
+			position: absolute;
+			top: 0;
+			left:50%;
+			margin-left: -40%;
+		}
+
+		&:after { //border at the bottom
+			content:"";
+			display: block;
+			width: 90%;
+			height:1px;
+			border-top:1px solid #424252;
+			position: absolute;
+			bottom: 0;
+			left:5%;
+		}
+
+		@media(max-width: @screen-md-min) {
+			padding-left: 0;
+		}
+	}
+	
+	.form-control {
+		background: #242439;
+		box-shadow: inset 0 0 3px 1px rgba(0,0,0,.25);
+		padding-left: 3px;
+		height: 27px;
+	}
+}
+
+.footer-forms {
+	.make-row();
+	margin: 0;
+}
+
+.subscribe {
+	.make-md-column(5);
+	padding: 0 0 0 2em;
+	
+	.form-control {
+		width: 62%;
+		margin-top: 1em;
+
+		@media(max-width: @screen-xs-min) {
+			width: 100%;
+		}
+	}
+		
+	button {
+		float: right;
+		margin-right: 2em;
+		margin-top: 1em;
+
+		@media(max-width: @screen-xs-min) {
+			float: none;
+		}
+	}
+	
+	@media(max-width: @screen-md-min) {
+		padding-left: 0;
+	}
+}
+
+.feedback {
+	.make-md-column(5);
+	padding-left: 0;
+
+	form {
+		.make-row();
+
+		.form-group {
+			.make-md-column(6);
+			padding-right: 0;
+
+			textarea {
+				height: 105px;
+				width: 100%;
+			}
+
+			input {
+				width: 100%;
+				margin-bottom: .8em;
+			}
+		}
+
+		button {
+			float: right;
+			margin-top: .7em;
+		}
+	}
+
+	@media(min-width: @screen-md-min) {
+		margin-left: 16%;
+	}
+}
+
+.social-links {
+	position: relative;
+	top: -3em;
+	width: 90%;
+	padding-left: 2em;
+
+	a {
+		display: inline-block;
+		width: 38px;
+		height: 38px;
+		margin-right: 10px;
+		background: url(../images/icons/social_icons.png);
+		transition: all 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			background-position: 0 -38px;
+		}
+
+		&[href*=facebook] {
+			background-position: -38px 0;
+		}
+
+		&[href*=facebook]:hover {
+			background-position: -38px -38px;
+		}
+
+		&[href*=linkedin] {
+			background-position: -76px 0;
+		}
+
+		&[href*=linkedin]:hover {
+			background-position: -76px -38px;
+		}
+	}
+
+	span {
+		margin-left: 7.3em;
+		line-height: 38px;
+
+		@media(max-width: @screen-sm-min) {
+			margin-left: 0;
+			display: block;
+		}
+	}
+
+	@media(max-width: @screen-md-min) {
+		top: 0;
+		width: 100%;
+	}
+}
+
